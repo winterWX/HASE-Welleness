@@ -1,0 +1,84 @@
+.myTop-content{
+   height: 350rpx;
+   padding: 10rpx 15rpx;
+   border-top: 2rpx solid #F0F0F0;
+   border-bottom: 2rpx solid #F0F0F0;
+}
+.main-content{
+  height: 200rpx;
+  padding: 20rpx;
+}
+.imgeWidth{
+  width:26%;
+  height:180rpx;
+  float: left;
+  background-color: aquamarine;
+  border-radius: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rigth-content{
+  width:70%;
+  float: right;
+  height: 152rpx;
+  padding-left: 10rpx;
+}
+.imgeWidth image{
+  height: 80rpx;
+  width: 80rpx;
+}
+.rigth-content h4{
+  height: 10rpx;
+}
+.right-title{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-weight: 700;
+}
+.text-content text{
+  color: #ccc;
+  font-size: 34rpx;
+  font-weight: normal;
+}
+.text-content .lvNum{
+  color: lawngreen;
+}
+.main-bottomContent{
+  height: 105rpx;
+  padding-left: 20rpx;
+  color: #ccc;
+  font-size: 32rpx;
+}
+.main-bottomContent .numFlg{
+  color: lawngreen;
+}
+.left-text{
+  float: left;
+}
+.left-text .chinerLeft-text{
+  float: left;
+  width: 140rpx;
+  border-right:1rpx solid #ccc ;
+}
+.left-text .chinerRight-text{
+  float: right;
+  width: 200rpx;
+  text-align: center;
+}
+.rigth-text{
+  float: right;
+  height: 105rpx;
+  line-height: 105rpx;
+}
+.out-content{
+  border-top: 40rpx solid #F0F0F0;
+  border-left: 25rpx solid #F0F0F0;
+  border-right: 25rpx solid #F0F0F0;
+  border-bottom: 40rpx solid #F0F0F0; 
+  height: 630rpx;
+} 
+
+.title-flg{
+    background-color: red;
+}

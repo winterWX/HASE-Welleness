@@ -1,0 +1,27 @@
+.col-main{
+  display: flex;
+  align-items: center;
+  border-bottom:1rpx solid #cccc ;
+  height: 100rpx;
+  padding: 0rpx 30rpx;
+  color: rgba(68, 67, 67, 0.8);
+}
+.leftText{
+  width: 300rpx;
+  padding-left: 32rpx;
+  font-size: 32rpx;
+}
+.showTextAfter{
+    float: right;
+}
+.rightNum{
+  display: flex;
+  align-items: center;
+  margin-left: 200rpx;
+}
+.rightNum .showAfter image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 18rpx;
+  margin-top: 12rpx;  
+}

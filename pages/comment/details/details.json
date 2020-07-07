@@ -1,0 +1,4 @@
+{
+  "usingComponents": {"HtmlView":"../../HtmlView/HtmlView"},
+  "navigationBarTitleText": "文章详情"
+}

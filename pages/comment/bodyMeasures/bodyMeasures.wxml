@@ -1,0 +1,30 @@
+<view>
+  <view class="speeds-main {{contentOpous ? 'contentOpous' : '' }}">
+      <view class="col-main" wx:for ="{{physicalData}}" wx:for-item="info"  wx:key="index"> 
+         <view class="leftText">{{info.name}}</view>
+         <view class="rightNum" bindtap="readDetail" data-id="{{index}}">
+            <view  wx:if="{{info.value === null}}" class="showVal">未记录</view>
+            <view  wx:else  class="showVal2">{{info.value}}{{index === 0 ? 'Kg' : 'cm'}}</view>
+            <view class="showAfter"><image src="../../../image/back.png"></image></view>
+         </view>
+      </view>
+         <view class="model-main"  wx:if="{{modelShow}}">
+               <view class="model-title">请输入目前{{modeName}}:</view>
+               <view class="model-input">
+                  <input auto-focus  class="inputFoce" 
+                     value="{{inputValData}}" 
+                     bindinput="bindKeyInput"
+                     type="number"
+                  />
+                  <view class="lineVal">
+                     <view class="line"></view>
+                     <view class="rightFlg">{{itemIndex === 0 ? 'Kg' :'cm'}}</view>
+                  </view>
+                  </view>
+               <view class="model-btn">
+                  <button type='default'  class="model-leftBtn" bindtap="canelFun">取消</button>
+                  <button type='primary'  class="model-rightBtn" bindtap="submitFun">确定</button>
+               </view>
+            </view>
+   </view> 
+</view>

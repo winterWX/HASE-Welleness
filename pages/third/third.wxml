@@ -1,0 +1,43 @@
+<view>
+<!--头部代码-->
+  <view class="myTop-content">
+     <view class="main-content">
+        <view class="imgeWidth">
+            <image src="../../image/tabBar/footer-icon-04-active.png"></image>
+        </view>
+        <view class="rigth-content">
+               <view class="right-title"><h4>大白菜</h4></view>
+               <view class="text-content">
+                  <text>中国大陆</text>
+               </view>
+               <view class="text-content">
+                  <text>用户等级：</text>
+                  <text class="lvNum">Lv1</text>
+               </view>
+        </view>
+     </view>
+     <view class="main-bottomContent">
+         <view class="left-text">
+            <view class="chinerLeft-text">
+               <view class="numFlg">96</view>
+               <view>关注</view>
+            </view>
+            <view class="chinerRight-text">
+               <view class="numFlg">34</view>
+               <view>粉丝</view>
+            </view>
+         </view>
+         <view class="rigth-text">
+           <text>成就</text>
+           <text>分享</text>
+         </view>
+     </view>
+  </view>
+<!--底部代码-->
+  <view class="out-content">
+     <div>
+        <h2 class="title-flg" style="width:100%">111111</h2>
+        <span>234234</span>
+     </div>
+  </view>
+</view>

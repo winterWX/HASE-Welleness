@@ -1,0 +1,5 @@
+{
+  "usingComponents": {"HtmlView":"../../HtmlView/HtmlView"},
+  "navigationBarTitleText": "文章列表",
+  "navigationBarTextStyle": "black"
+}

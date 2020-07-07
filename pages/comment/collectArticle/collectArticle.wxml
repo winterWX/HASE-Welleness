@@ -1,0 +1,35 @@
+<wxs  module="dateFr" src="../../../utils/flter.wxs"></wxs>
+<view class="container_main">
+   <view class="info" wx:for="{{listData}}" wx:key="index">
+     <view class="top-block"  bindtap="listClick" data-itemid="{{item.id}}">
+        <view class="title">
+          <view class="mainText">{{item.title}}</view>
+          <view class="timeText">
+              <view class="timeTextLeft">恒生健康官网</view>
+              <view class="timeText-time">{{timeData[index]}}</view>
+          </view>
+        </view>
+        <view wx:if="{{item.thumbLocation !==''}}">
+             <image class="top-blockImage" src="{{item.thumbLocation}}"></image>
+        </view>
+        <view wx:else><image class="top-blockImageBoth"></image></view>
+     </view>
+     <view class="description_text"><HtmlView detail="{{dateFr.strText(item.content)}}"/></view>
+     <view class="bottom-time">
+         <view class="leftTime">
+            <view style="padding-right:5rpx">225浏览</view>
+            <view class="itemBtn {{dateFr.indexBackColor(index)}}" wx:for="{{dateFr.tagsFilter(item.tags)}}" wx:key="index">{{item}}</view>
+         </view>
+         <!-- <view class="rightShare" bindtap="collectionImageShare" data-index="{{index}}">
+                <image wx:if="{{collectionImage === 0}}" src="../../../image/collection-default.png"></image>
+                <image wx:if="{{collectionImage === 1}}" src="../../../image/collection.png"></image>
+         </view> -->
+          <view class="rightShare" bindtap="collectionImageShare"  
+                data-id="{{item.id}}">
+                <view class='numTagContent' wx:if="{{item.isCollect}}" ><image  src="../../../image/collection.png"></image><text class="numTag">110</text></view>
+                <view class='numTagContent' wx:else><image  src="../../../image/collection-default.png"></image><text class="numTag">110</text></view>
+                <view class='numTagContent' ><image src='../../../image/share.png'></image><text class="numTag">110</text></view>
+          </view>
+     </view> 
+   </view>
+</view>

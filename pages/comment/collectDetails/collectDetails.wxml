@@ -1,0 +1,66 @@
+<wxs  module="dateFr" src="../../../utils/flter.wxs"></wxs>
+<view>
+    <view class="details_main"  wx:if="{{detailsData !==null && JSON.stringify(detailsData) !== '{}'}}">
+    <!-- 头部 -->
+      <view class="details_hedar">
+          <view class="details_title"><h5>{{detailsData.title}}</h5></view>
+          <view class="details_titleBottom">
+          <view class="hengshengTitle">
+              <view class="hengshengTitle-top">恒生健康官方</view>
+              <view class="details_titleLeft">{{createTime}}</view>
+          </view>
+          <view class="lookTetx-main">
+              <view class="lookTetx">
+                      <view class="lookTetxNum">225浏览</view>
+                      <view class="itemBtn {{dateFr.indexBackColor(index)}}" 
+                      wx:for="{{dateFr.tagsFilter(detailsData.tags)}}" wx:key="index">{{item}}</view>
+              </view>
+              <view class="collection-main">
+                 <view bindtap="collectionImageShare" class="ImageList">
+                        <view class="fieldset" wx:if="{{collectionImage === 0}}">
+                        <image  src="../../../image/collection-default.png"></image>
+                         <text class="numTag">11</text>
+                        </view>
+                        <view class="fieldset" wx:if="{{collectionImage === 1}}"><image wx:if="{{collectionImage === 1}}" src="../../../image/collection.png"></image>
+                         <text class="numTag">11</text>
+                        </view>
+                 </view>
+                 <view class="fieldset" bindtap="shareBottom"><image class="details_titleRight"  src="../../../image/share.png"></image>
+                 <text class="numTag">11</text>
+                 </view>
+              </view>
+           </view>
+          </view>
+      </view>
+      <!-- 底部主页面 -->
+      <view class="text_description" wx:if="{{detailsData.content !== ''}}">
+          <!-- <HtmlView detail="{{detailsData.content}}"/> -->
+          <HtmlView detail="{{changeDataUrl}}"/>
+      </view>
+      <!-- 底部弹框 -->
+        <view class="modals modals-bottom-dialog" catchtouchmove="preventTouchMove"  hidden="{{hideModal}}">
+          <view class="modals-cancel" bindtap="hideModal"></view>
+            <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+                <view class="showPage">
+                    <view  class="item-show">
+                      <image src="../../../image/wechat.png"></image>
+                    </view>
+                    <view class="item-show">
+                      <image src="../../../image/wechatmoments.png"></image>
+                    </view>
+                    <view class="item-show">
+                      <image src="../../../image/link.png"></image>
+                    </view>
+                </view>
+                <view class="show_text">
+                    <view class="item-text">微信</view>
+                    <view class="item-text">朋友圈</view>
+                    <view class="item-text">复制链接</view>
+                </view>
+            </view>
+      </view>
+    </view>
+    <view wx:else>
+       <view class="error_text">文章详情内容加载中</view>
+    </view>
+</view>

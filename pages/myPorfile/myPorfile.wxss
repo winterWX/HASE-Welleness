@@ -1,0 +1,281 @@
+page{
+  background-color: #FAFAFA;
+}
+.PageBackColor{
+ background-color: #FFFFFF;
+}
+.settingRight{
+  text-align: right;
+  margin-right: 72rpx;
+}
+.settingRight image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.topSetting{
+  height: 360rpx;
+}
+.topSetting-main{
+  display: flex;
+  align-items: center;
+  padding: 0rpx 20rpx;
+}
+.imgeLeft{
+  position: relative;
+}
+.dafulatImge{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 80rpx;
+  background-color: #E6E6E6;
+}
+.imgeLeft image{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 80rpx;
+}
+.smallImga{
+  width: 40rpx !important;
+  height: 40rpx !important;
+  position: absolute;
+  top: 120rpx;
+  left: 90rpx;
+}
+.myprofils-content{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.myprofils-content-imge{
+  display: flex;
+  align-items: center;
+}
+.myprofils-content-imge image{
+    width: 70rpx;
+    height: 70rpx;
+    z-index: 33;
+}
+.listItemCode{
+  width: 250rpx;
+  text-align: center;
+}
+.myprofils-content-right{
+    height: 45rpx;
+    line-height: 45rpx;
+    width: 90rpx;
+    border-radius: 0rpx 50rpx 50rpx 0rpx;
+    background-color: #6B69C6;
+    position: absolute;
+    top: 6rpx;
+    left: 39rpx;
+    font-size: 28rpx;
+    color: white;
+    text-align: center;
+}
+.yellowNum{
+  background-color: #F3D535;
+  width: 80rpx;
+  height: 48rpx;
+  border-radius: 40%;
+  font-size: 30rpx;
+  margin-left: 65rpx;
+  border: 1rpx solid #EEEEEE;
+  text-align: center;
+  margin-top: -10rpx;
+  display: flex;
+  justify-content: center;
+  color: #1D201F;
+}
+.negiveRight image{
+   height: 50rpx;
+   width: 50rpx;
+}
+.topMiddenBlock{
+  width: 460rpx;
+  padding: 10rpx 0rpx 0rpx 10rpx;
+}
+.myprofilsName{
+  margin-left: 10rpx;
+  color: #222524;
+}
+.bottom-data{
+  padding: 15rpx 30rpx 0rpx 30rpx;
+}
+.contentText{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #2B2E2D;
+   margin-top:10rpx ;
+}
+.numFlg{
+  width: 300rpx;
+  text-align: center;
+}
+.topText{
+  font-weight: 900;
+  font-size:35rpx;
+}
+.bottomText{
+   color: #7D7D7D;
+   font-size: 32rpx;
+}
+.speedBlock-image image{
+  height: 50rpx;
+  width: 50rpx;  
+}
+.headLeBlock-eyes{
+  height: 30rpx;
+  float: left;
+  margin-top: 17rpx;
+  margin-left: 20rpx;
+}
+.headLeBlock-eyes image{
+  height: 50rpx;
+  width: 50rpx;
+  float: left;
+}
+.headLeBlock-bottomImage image{
+  height: 50rpx;
+  width: 50rpx;
+}
+.speedBlock-content{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 8rpx 20rpx 12rpx 20rpx;
+}
+.speedBlock-content .speed-title{
+  float: left;
+  font-size: 45rpx;
+  font-weight: 900;
+}
+.speedBlock-content .speedBlock-image{
+  float: right;
+  line-height: 100rpx;
+}
+.headLeBlock-content{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.headLeBlock-topImage{
+  float: left;
+  font-size: 45rpx;
+  font-weight: 900;
+}
+.headLeBlock-bottomImage{
+  float: right;
+  line-height: 100rpx;
+}
+.headLeBlock-bottom .shareRight image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 8rpx;
+  margin-top: 5rpx;  
+}
+.headLeBlock-midden {
+  display: flex;
+  margin-left: 20rpx;
+}
+.headLeBlock-bottom{
+  display: flex;
+  margin-top: 25rpx;
+}
+.headLeBlock-midden .text-title{
+  font-size: 32rpx;
+  width: 250rpx;
+  color: #323534;
+}
+.headLeBlock-midden .afterTitle{
+  color: #A2A2A2;
+}
+.headLeBlock-bottom .headLeBlock-number{
+  width: 200rpx;
+  font-size: 58rpx;
+  padding-left: 20rpx;
+}
+.headLeBlock-bottom .secondNum{
+  padding-left: 80rpx;
+}
+.shareRight{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01BA72;
+  color: white;
+  font-size: 28rpx;
+  margin-left: 60rpx;
+  width: 180rpx;
+  border-radius: 50rpx 0rpx 0rpx 50rpx;
+}
+.speedBlock{
+ height: 300rpx;
+ margin: 25rpx 30rpx;
+}
+.headLeBlock{
+ height: 300rpx;
+ padding: 20rpx;
+ margin: 25rpx 30rpx;
+}
+.sendBlock{
+ height: 300rpx;
+ padding: 20rpx;
+ margin: 25rpx 30rpx;
+ display: flex;
+ align-items: center;
+}
+.heahle-data{
+  display: flex;
+  align-items: center;
+  margin-top: 90rpx;
+}
+.afterTexts{
+  margin-left:15rpx;
+}
+.heahle-Leftdata{
+  display: flex;
+  align-items: center;
+}
+.heahle-Leftdata .numberData{
+   font-size: 60rpx;
+   margin-right: 10rpx;
+}
+.heahle-Leftdata .numberText{
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  color: #B3B3B3;
+}
+.heahl-time{
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-left: 160rpx;
+  color: #B3B3B3;
+}
+/* .sendBlockImage{
+  display: flex;
+  align-items: center;
+  padding-top: 30rpx;
+} */
+.sendBlocWidth image{
+  width: 70rpx;
+  height: 70rpx;  
+}
+.sendBlockText{
+  display: flex;
+  align-items: center;
+  color:#AAAAAA;
+  font-size: 35rpx;
+}
+.sendBlocWidth{
+  width: 210rpx;
+  text-align: center;
+}
+.sendBlocBottom{
+  width: 210rpx;
+  text-align: center;
+  font-size: 30rpx;
+	color: #666666;
+}
+.noshadow{
+  hover-class:none;
+}

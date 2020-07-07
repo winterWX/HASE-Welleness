@@ -1,0 +1,39 @@
+<view>
+        <view>
+            <view class='header'>
+                <image src='/image/wx_login.png'></image>
+            </view>
+            <button class='bottom' type='primary' open-type="getUserInfo" bindgetuserinfo="getShowModal">微信用户一键授权登录</button>
+        </view>
+        <view class="modals modals-bottom-dialog" catchtouchmove="preventTouchMove"  hidden="{{hideModal}}">
+            <view class="modals-cancel" bindtap="hideModal"></view>
+            <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+                <view class='msg-box'>
+                    <view class='aumsg'>
+                        <view class="aumsg-top">
+                            <image src ='../../image/tabBar/footer-icon-04-active.png'></image>
+                            <text class='msg-top'>熊哥律师事务所 申请</text>
+                        </view>
+                        <view class="aumsg-bottom">
+                            <text>获取你的昵称、头像、地区及性别</text>
+                        </view>
+                    </view>
+                    <view class="userData">
+                        <view class="userinfo-image"><image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image></view>
+                        <view class="text-content">
+                                <view class="userinfo-content">
+                                    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+                                </view>
+                                <view class="userinfo-nickBoutton">
+                                    <text>微信个人信息</text>
+                                </view>
+                        </view>
+                    </view>
+                    <view class='btn_wrapper'>
+                            <button type="default" bindtap="hideModal" class='btn btnText btn_default'>拒绝</button>
+                            <button type="primary" class='btn confirm_btn btnText' open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumberData'>允许</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+</view>  

@@ -1,0 +1,59 @@
+{
+  "pages":[
+    "pages/exercise/exercise",
+    "pages/index/index",
+    "pages/myPorfile/myPorfile",
+    "pages/third/third",
+    "pages/insurance/insurance",
+    "pages/comment/details/details",
+    "pages/comment/setting/setting",
+    "pages/comment/accountSecurity/accountSecurity",
+    "pages/comment/exerciseDetails/exerciseDetails",
+    "pages/comment/friendActivity/friendActivity",
+    "pages/comment/myExerciseDetails/myExerciseDetails",
+    "pages/comment/myExercise/myExercise",
+    "pages/comment/pushSetting/pushSetting",
+    "pages/comment/collectArticle/collectArticle",
+    "pages/comment/collectDetails/collectDetails",        
+    "pages/comment/bodyMeasures/bodyMeasures"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "个人小程序",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/exercise/exercise",
+        "text": "运动",
+        "iconPath": "image/tabBar/exercise_default.png",
+        "selectedIconPath":"image/tabBar/exercise.png"
+      },
+      {
+        "pagePath": "pages/index/index", 
+        "text": "健康",
+        "iconPath": "image/tabBar/community_default.png",
+        "selectedIconPath": "image/tabBar/community.png"
+      },
+      {
+        "pagePath": "pages/insurance/insurance",
+        "text": "服务",
+        "iconPath": "image/tabBar/insurance_default.png",
+        "selectedIconPath": "image/tabBar/insurance.png"
+      }, 
+      {
+        "pagePath": "pages/myPorfile/myPorfile",
+        "text": "我的",
+        "iconPath": "image/tabBar/mine_default.png",
+        "selectedIconPath": "image/tabBar/mine.png"
+      } 
+    ],
+    "backgroundColor": "#fff",
+    "color": "#C4C4C4",
+    "selectedColor": "#17C75D"
+  }
+}

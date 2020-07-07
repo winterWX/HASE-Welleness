@@ -1,0 +1,77 @@
+<view>
+  <view class="speeds-main {{opuetion? 'opuetion' :''}}">
+      <view class="col-main" bindtap="accoutBar"> 
+          <view class="leftText">账号与安全</view>
+          <view class="rightNum" bindtap="readDetail" data-id="{{index}}">
+              <view  class="showVal"></view>
+              <view  class="showAfter"><image src="../../../image/back.png"></image></view>
+          </view>
+      </view>
+     <view class="col-main" bindtap="pushSetting"> 
+         <view class="leftText">推送设置</view>
+         <view class="rightNum"  data-id="{{index}}">
+            <view  class="showVal"></view>
+            <view  class="showAfter"><image src="../../../image/back.png"></image></view>
+         </view>
+      </view>
+      <view class="col-main"> 
+         <view class="leftText">隐私</view>
+         <view class="rightNum" bindtap="readDetail" data-id="{{index}}">
+            <view  class="showVal"></view>
+            <view  class="showAfter"><image src="../../../image/back.png"></image></view>
+         </view>
+      </view>
+      <view class="col-main" bindtap="clearStorgeData" > 
+         <view class="leftText">清除缓存</view>
+         <view class="rightNum">
+            <view  class="showVal">{{defuleData}}</view>
+            <view  class="showAfter"><image src="../../../image/back.png"></image></view>
+         </view>
+      </view>
+            <view class="col-main"> 
+         <view class="leftText">常见问题</view>
+         <view class="rightNum" bindtap="readDetail" data-id="{{index}}">
+            <view  class="showVal"></view>
+            <view  class="showAfter"><image src="../../../image/back.png"></image></view>
+         </view>
+      </view>
+            <view class="col-main"> 
+         <view class="leftText">邀请好友</view>
+         <view class="rightNum" bindtap="readDetail" data-id="{{index}}">
+            <view  class="showVal"></view>
+            <view  class="showAfter"><image src="../../../image/back.png"></image></view>
+         </view>
+      </view>
+      <view class="col-main"> 
+         <view class="leftText">协议与条款</view>
+         <view class="rightNum" bindtap="readDetail" data-id="{{index}}">
+            <view  class="showVal"></view>
+            <view  class="showAfter"><image src="../../../image/back.png"></image></view>
+         </view>
+      </view>
+      <view class="col-main"> 
+         <view class="leftText">关于我们</view>
+         <view class="rightNum" bindtap="readDetail" data-id="{{index}}">
+            <view  class="showVal"></view>
+            <view  class="showAfter"><image src="../../../image/back.png"></image></view>
+         </view>
+      </view>
+      <view class="canlenPage" bindtap="logOut">
+        退出登录
+      </view>
+      <view class="modelBoxShare" wx:if="{{boxShare}}">
+         <view class="titleText">确定退出登录?</view>
+         <view class="btnSetting">
+            <button type="default" bindtap="canlenBox">取消</button>
+            <button type='primary' bindtap="backBox">确定</button>
+         </view>
+      </view>
+      <view class="modelBoxShare" wx:if="{{clearSrogt}}">
+         <view class="titleText">本次将清除缓存138M</view>
+         <view class="btnSetting">
+            <button type="default" bindtap="canlenClear">取消</button>
+            <button type='primary' bindtap="comfirmClear">确定</button>
+         </view>
+      </view>
+   </view> 
+</view>

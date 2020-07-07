@@ -1,0 +1,118 @@
+<wxs  module="dateFr" src="../../../utils/flter.wxs"></wxs>
+<view class="container_main"  style="background-image:url({{parentData.imageUrl}})">
+   <view class="backgruang-top">
+      <view class="backgruang-leftImage"  bindtap="backPageBtn"><image src='../../../image/backLeft.png'></image></view>
+      <view class="secerisTitle">
+         <view class="secerisTitle-Btn">
+             <view class="topTitle-Btn">{{myActivityAndMileStoneVo.title}}</view>
+             <view class="image-Btn">
+                <view class="image-BtnLeft">活动类型: {{myActivityAndMileStoneVo.type}}</view>
+                <view class="image-BtnRight" wx:if="{{myActivityAndMileStoneVo.status === 1}}">未开始</view>
+                <view class="image-BtnRight" wx:if="{{myActivityAndMileStoneVo.status === 2}}">进行中</view>
+                <view class="image-BtnRight" wx:if="{{myActivityAndMileStoneVo.status === 3}}">已结束</view>
+             </view>
+         </view>
+      </view>
+   </view>
+</view>
+<!---------------tagContent modals----------------------------->
+<view class="modals modals-bottom-dialog  modals-content" hidden="{{hideModal}}">
+        <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+            <view class='msg-box'>
+                <view class="rightRawNum backViewRight">
+                        <image  class="integralImge"  src='../../../image/integral.png'></image>
+                        <view  class="topText-right backView">
+                            <image  class="joinImage"  src='../../../image/join.png'></image>
+                            <view class="joinText" >{{rewardVal}}</view> 
+                        </view>
+                </view>
+                <view class="activeTime">
+                    <view class="activeTime-title">活动时间</view>
+                    <view class="activeTime-text">{{myActivityAndMileStoneVo.startTime}} - {{myActivityAndMileStoneVo.endTime}}</view>
+                </view>
+                <view class="activeDetail title-content">
+                    <view class="activeDetail-title">活动详情</view>
+                    <view class="activeDetail-text">
+                        <HtmlView detail="{{myActivityAndMileStoneVo.content}}"/>
+                    </view>
+                </view>
+                <view class="goodFriendSort">
+                    <view class="goodFriendSort-title">里程碑</view>
+                    <view class="goodFriendSort-speed">
+                        <view class="sortTop-speed">
+                            <view class="sortTop-imageItem" wx:for="{{mileStoneList}}" wx:key="{{index}}">
+                                <view class="sortText">{{item.reward}}积分</view><image class="sortTextImage"  src='../../../image/san2.png'></image>
+                            </view>
+                        </view>
+                        <view class="sortMidden-speed">
+                            <image class="exerciseImage" src='../../../image/exercise.png'></image>
+                            <view class="startRuse"></view>
+                            <view class="lineRuse"></view>
+                            <image class="exercisesan1Image" src='../../../image/san1.png'></image>
+                            <view class="lineRuse"></view>
+                            <image class="exercisesan3Image"  src='../../../image/san3.png'></image>
+                            <view class="lineRuseWh"></view>
+                            <image class="exercisesan1Image" src='../../../image/san1.png'></image>
+                            <view class="lineRuseWh"></view>
+                            <image class="exercisesan3Image"  src='../../../image/san3.png'></image>
+                            <view class="lineRuseWh"></view>
+                            <image class="exercisesan1Image" src='../../../image/san1.png'></image>
+                            <view class="lineRuseWh"></view>
+                            <image class="exercisesan3Image"  src='../../../image/san3.png'></image>
+                            <view class="lineRuseWh"></view>
+                            <image class="exercisesan1Image" src='../../../image/san1.png'></image>
+                            <view class="lineRuseWh"></view>
+                            <image class="exercisesan3Image"  src='../../../image/san3.png'></image>
+                            <view class="exercisText">挑战成功</view>
+                        </view>
+                        <view class="sortBottom-speed">
+                            <view class="numSpeed" class="numSpeedFirst">0步</view>
+                            <view class="numSpeed" wx:for="{{mileStoneList}}" wx:key="{{index}}" class="numSpeed">{{item.mileStoneTarget}}步</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="activefriends title-content">
+                    <view class="activefriends-top">
+                        <view class="activefriends-titleTop">参与的好友</view>
+                       <view bindtap="allPersonNum" class="allPersonNum">
+                            <view class="allPersonText">查看全部</view>
+                            <image class="activefriends-image" src="../../../image/back.png"></image>
+                        </view>
+                    </view>
+                    <view class="imageList backView">
+                        <view  class="imageItem" wx:for="{{myFriendActivityVo}}"  wx:key="{{item.id}}">
+                            <view class="imageList-item"><image src="{{item.thumb}}"></image></view>
+                            <view>{{item.nickname}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="activeProgress">
+                    <view class="goodFriendSortTitle">好友挑战排行</view>
+                    <view  class="activeProgrItem" wx:for="{{allMyFriendActivityVo}}" wxkey="{{item.id}}" >
+                        <view class="activeProgrItem-image"><image src='{{item.thumb}}'></image></view>
+                        <view class="activeItem-text">
+                             <view class="activeItemTextWid" style="width:{{item.steps/200}}rpx">{{item.nickname}}</view>
+                        </view>
+                        <view class="activeItem-nuber">{{item.stepsNum}}步</view>
+                    </view>
+                </view>
+            </view>
+            <view class="activeBtn" wx:if='{{myActivityAndMileStoneVo.status !==3}}'>
+                <view class="activeBtn-left activeBtn-item">
+                    <image src="../../../image/share-default.png"></image>
+                    <view style="margin-left:40rpx;">邀请好友</view>
+                </view>
+                <view class="activeBtn-right activeBtn-item" wx:if="{{flag === true}}">
+                    <image src="../../../image/join-sel.png"></image>
+                     <view style="margin-left:40rpx;"  >已报名</view>
+                </view>
+                <view class="activeBtn-rightBlue activeBtn-item" wx:if="{{flag === false}}">
+                    <image src="../../../image/join-sel.png"></image>
+                     <view style="margin-left:40rpx;" wx:if="{{flag === false}}">我要挑战</view>
+                </view>
+            </view>
+            <view class="activeBtnEnd" wx:if='{{myActivityAndMileStoneVo.status ===3}}'>
+            <view class="activeBtnEndText" >已结束</view>
+            </view>
+        </view>
+     </view> 

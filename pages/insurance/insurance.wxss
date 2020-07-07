@@ -1,0 +1,153 @@
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+}
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+}
+.content {
+  margin-left: 90rpx;
+  margin-bottom: 50rpx;
+}
+.content text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 20rpx;
+}
+.bottom {
+  margin: 70rpx 50rpx;
+  font-size: 32rpx;
+  width:650rpx !important;
+}
+/* box 部分  */
+ .msg-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFf;
+ }
+ .btn_wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100rpx;
+    line-height: 100rpx;
+    width:80%;
+    margin-top: 90rpx;
+    margin-left: 65rpx;
+ }
+ .btn{
+    background-color: #fff;
+    font-size: 30rpx;
+    border-radius: 10rpx;
+    padding: 5rpx !important;
+    width: 250rpx !important;
+    display: flex;
+    justify-content: center;
+    align-content: center; 
+    height: 70rpx;
+    line-height: 65rpx; 
+ }
+ .btn_default{
+   margin-left: 10rpx;
+ }
+ .confirm_btn{
+  margin-right: 10rpx;
+ }
+ .userData{
+  display: flex;
+  align-items: center;  
+  height: 130rpx;
+  padding-left: 5rpx;
+  border-bottom: 2rpx solid rgba(7,17,27,0.1);
+ }
+ .modals {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.modals-cancel {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bottom-dialog-body {
+  position: absolute;
+  z-index: 10001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  height: 500rpx;
+  background-color: #fff;
+  border-radius: 15rpx 15rpx 0 0;
+}
+/*动画前初始位置*/
+.bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.userinfo-avatar{
+  width: 60rpx;
+  height: 60rpx;  
+  margin-top:10rpx ;
+}
+.userinfo-image{
+  float: left;
+}
+.text-content{
+  padding-left: 10rpx;
+}
+.aumsg{
+  padding-top:8rpx;
+  padding-bottom: 18rpx;
+  height: 130rpx;
+  border-bottom: 2rpx solid rgba(7,17,27,0.1);
+ }
+ .aumsg-top{
+    display: flex;
+    align-items: center;
+ }
+.aumsg-top image{
+  width: 28rpx;
+  height: 28rpx;  
+}
+.msg-top {
+  padding: 15rpx;
+  font-size: 30rpx;
+  font-weight: 900;
+  padding-bottom: 20rpx;
+}
+.aumsg-bottom text{
+  font-size: 32rpx;
+  font-weight: 900;  
+}
+.text-content{
+  padding-left: 20rpx;
+}
+.userinfo-nickname{
+  font-size: 26rpx;
+  font-weight: 900;
+  padding: 1rpx;
+}
+.userinfo-content{
+    display: flex;
+    align-content: center;
+    margin-bottom: 5rpx;
+}
+.userinfo-nickBoutton{
+  font-size: 24rpx;
+  color: #666;  
+  padding: 1rpx;
+} 

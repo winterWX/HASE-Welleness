@@ -1,0 +1,46 @@
+<wxs  module="dateFr" src="../../utils/flter.wxs"></wxs>
+<button open-type='share'></button>
+<view class="container_main">
+   <view class="swithBtn">
+      <view class="swithTitle-main">
+            <view wx:for="{{swithTitle}}"         
+               wx:key="{{value}}" 
+               bindtap="topTabbr"
+               data-index="{{index}}" class="acttiveSwithBtn {{activeIndex === index ? 'activeSwithBlck' :''}}"  >{{item.name}}</view>
+        </view>
+        <view class="topTitle-mainsCent">
+         <view wx:for="{{topTitle}}" 
+         wx:key="{{id}}" 
+         bindtap="topTitleSwith"
+         data-index="{{index}}"
+         class="defultBtn {{topTitleIndex === index ? 'swithBlck' :''}}">{{item.name}}</view></view>
+   </view>
+   <view class="infos-main">
+      <view class="info" wx:for="{{activeListData}}" wx:key="index">
+      <view class="top-block" data-itemid="{{item.id}}">
+         <view class="topBlockIamge" wx:if="{{item.coverImageLocation !==''}}">
+            <image class="top-blockImage" src="{{item.coverImageLocation}}"></image>
+         </view>
+         <view class="topBlockIamge"  wx:else><image class="top-blockImageBoth"></image></view>
+         <view class="title">
+            <view class="mainTextRol">
+               <view class="mainText"  bindtap="listItemShow" data-index='{{index}}'>{{item.title}}</view>
+               <view class="titltAction">活动类型:<text class="titltActionText">{{item.type}}</text></view>
+               <view class="titltAction">活动时间:<text class="titltActionText">{{endTimeData[index]+'-'+timeData[index]}}</text></view>
+            </view>
+            <view class="timeText">
+               <view class="timeTextLeft">
+                  <view class="timeTextLeft-main">
+                    <view class="timeTextLeft-iamges"><image src="../../image/integral.png"></image></view>
+                    <view class="timeTextLeft-num">+{{sortData[index]}}积分</view> 
+                  </view>
+                  <view class="rigth-btn" wx:if='{{item.status === 1}}' >未开始</view>
+                  <view class="rigth-btn" wx:if='{{item.status === 2}}' >进行中</view>
+                  <view class="rigth-endActive" wx:if='{{item.status === 3}}' >已结束</view>
+               </view>
+            </view>
+         </view>
+      </view>
+      </view>
+   </view>
+</view>

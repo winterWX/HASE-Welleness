@@ -1,0 +1,90 @@
+page{
+  background-color: #FAFAFA;
+  /*background-color: red;*/
+}
+.speeds-main{
+  position: relative;
+}
+.col-main{
+  display: flex;
+  align-items: center;
+  border-bottom:1rpx solid #cccc ;
+  height: 100rpx;
+  padding: 0rpx 30rpx;
+  color: rgba(68, 67, 67, 0.8);
+  /* background-color: #FFFFFF; */
+}
+.leftText{
+  width: 450rpx;
+  padding-left: 32rpx;
+  font-size: 32rpx;
+}
+.showVal{
+  padding: 5rpx;
+  width: 90rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+.rightNum{
+  display: flex;
+  align-items: center;
+  margin-left: 40rpx;
+}
+.rightNum .showAfter{
+  /* margin-left: 110rpx; */
+}
+.rightNum .showAfter image{
+  width: 58rpx;
+  height: 58rpx;
+  margin-top: 12rpx;  
+}
+.canlenPage{
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F69DA4;
+  font-size: 32rpx;
+  margin-top: 55rpx;
+  /* background-color: #FFFFFF; */
+}
+.modelBoxShare{
+  background-color: #FFFFFF;
+  width: 560rpx;
+  height: 300rpx;  
+  position: absolute;
+  border: 1rpx solid #cccc;
+  top: 230rpx;
+  left: 80rpx;
+  padding: 100rpx 20rpx 50rpx 20rpx;
+  border-radius: 5rpx;
+}
+.titleText{
+  text-align: center;
+  padding: 20rpx 0rpx;
+  font-size: 40rpx;
+}
+.btnSetting{
+  display: flex;
+  align-items: center;
+  padding-top: 100rpx;
+  margin-left:50rpx ;
+}
+.btnSetting button{
+  width: 200rpx !important;
+  border-radius: 50rpx !important;
+  margin-left: 20rpx !important;
+  margin-right:20rpx !important;
+}
+.opuetion{
+  position: absolute;
+  z-index: 1500;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.opuetionNum{
+  background-color: #FAFAFA !important;
+}

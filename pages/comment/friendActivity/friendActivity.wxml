@@ -1,0 +1,9 @@
+<view class="content-main">
+  <view class="imageFriendPerson">共{{myActiveFriendList.length}}人</view>
+  <view class="imageFriendList"> 
+      <view class="imageFriendItem" wx:for="{{myActiveFriendList}}" wx:key="{{item.id}}">
+         <view class="imageFriend"><image src="{{item.thumb}}"></image></view>
+         <view class="imageFriendName">{{item.nickname}}</view>
+      </view>
+  </view>
+</view>

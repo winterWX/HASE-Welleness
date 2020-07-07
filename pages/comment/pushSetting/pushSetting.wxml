@@ -1,0 +1,8 @@
+<view>
+    <view class="col-main" > 
+        <view class="leftText">系统通知</view>
+        <view class="rightNum">
+            <view  class="showTextAfter"><switch  checked  bindchange="switch1Change" class="wx-switch-input" /></view>
+        </view>
+    </view>
+</view>

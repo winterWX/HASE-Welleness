@@ -1,0 +1,5 @@
+{
+  "usingComponents": {"HtmlView":"../../HtmlView/HtmlView"},
+  "navigationBarTitleText": "运动",
+  "navigationBarBackgroundColor": "#FFFFFF"
+}

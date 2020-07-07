@@ -1,0 +1,6 @@
+{
+  "usingComponents": {"HtmlView":"../../HtmlView/HtmlView"},
+  "navigationBarTitleText": "活动详情",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom"
+}

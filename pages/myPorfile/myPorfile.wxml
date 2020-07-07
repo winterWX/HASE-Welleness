@@ -1,0 +1,84 @@
+<view>
+   <view class="topSetting PageBackColor">
+        <view class="settingRight">
+          <navigator  hover-class="noshadow" url='../comment/setting/setting'><image src = '../../image/set.png'></image></navigator>
+        </view>
+        <view  class="topSetting-main">
+           <view class="imgeLeft">
+            <image wx:if="{{myProfileObject.avatarAddress !==null}}" src="{{myProfileObject.avatarAddress}}"></image>
+            <image  wx:if='{{myProfileObject.avatarAddress !== null && myProfileObject.gender === 1}}' class="smallImga" src="../../image/man.png"></image>
+            <image  wx:if='{{myProfileObject.avatarAddress !== null && myProfileObject.gender === 0}}' class="smallImga"  src="../../image/women.png"></image>
+            </view>
+           <view class="topMiddenBlock">
+               <view class="myprofilsName">Sophie</view>
+               <view class="myprofils-content">
+                     <view  class="myprofils-content-imge"><image src="../../image/medal.png"></image>
+                     <view class="myprofils-content-right">{{myProfileObject.badges === null ? 0 : myProfileObject.badges}}枚</view>
+                 </view>
+                 <view class="yellowNum">Lv{{myProfileObject.level === null ? 0 : myProfileObject.level}}</view>
+               </view>
+           </view>
+           <view class="negiveRight"><image src="../../image/back.png"></image></view>
+        </view>
+        <view class="bottom-data">
+           <view class="contentText">
+             <view class="listItemCode">
+               <view class="topText">10</view>
+               <view class="bottomText">关注</view>
+             </view>
+            <view class="listItemCode">
+               <view class="topText">21</view>
+               <view class="bottomText">粉丝</view>
+             </view>
+            <view class="listItemCode" bindtap="collectArticleTo">
+               <view class="topText">10</view>
+               <view class="bottomText">收藏</view>
+             </view>
+           </view>
+        </view>
+   </view>
+   <view class="speedBlock PageBackColor">
+      <view class="speedBlock-content">
+            <view class="speed-title">运动数据</view>
+            <view class="speedBlock-image"><image src="../../image/back.png"></image></view>
+         </view>
+         <view class="headLeBlock-midden">
+             <view class="text-title">本周运动天数<text class="afterTitle">(天)</text></view>
+             <view class="text-title afterTexts">本周消耗<text class="afterTitle">(千卡)</text></view>
+         </view>
+         <view class="headLeBlock-bottom">
+               <view class="headLeBlock-number">4</view>
+               <view class="headLeBlock-number secondNum">78643</view>
+               <view class="shareRight">
+                  <image src="../../image/share.png"></image>
+                  <text>立即分享</text>
+               </view>
+         </view>
+   </view>
+   <view class="headLeBlock PageBackColor">
+        <view class="headLeBlock-content">
+            <navigator url="../comment/bodyMeasures/bodyMeasures">
+               <view class="headLeBlock-topImage">身体数据</view>
+               <view class="headLeBlock-eyes"><image src="../../image/eye.png"></image></view>
+               <view class="headLeBlock-bottomImage"><image src="../../image/back.png"></image></view>
+            </navigator>
+         </view>
+         <view class="heahle-data">
+            <view class="heahle-Leftdata">
+               <view class="numberData">{{myProfileObject.weight}}</view>
+               <view class="numberText">体重 Kg</view>
+            </view>
+            <view class="heahl-time">记录时间：2020.05.26</view>
+         </view>
+   </view>
+   <view class="sendBlock PageBackColor">
+       <view class="sendBlockImage">
+         <view class="sendBlocWidth"><image src="../../image/equipment.png"></image></view>
+         <view class="sendBlocBottom">智能硬件</view>
+       </view>
+       <view class="sendBlockImage"  bindtap="myExsertive">
+          <view class="sendBlocWidth"><image src="../../image/activity.png"></image></view>
+          <view class="sendBlocBottom">我的活动</view>
+       </view>
+   </view>
+</view>

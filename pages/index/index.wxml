@@ -1,0 +1,100 @@
+<wxs  module="dateFr" src="../../utils/flter.wxs"></wxs>
+<view class="container_main">
+    <view class="top-content">
+        <view class="top-input">
+          <input class="inputWidth" placeholder="请输入你要搜索的内容"
+              type="text"
+              name="inputSearchData"
+              bindinput="bindKeyInput"
+              value="{{inputSearchData}}"
+              bindconfirm="searchSend"
+          />
+          <image  src="../../image/search.png"></image> 
+        </view>
+      <!-- 导航栏 -->
+      <view class="scrollView">
+            <scroll-view scroll-x class="navbar" scroll-with-animation scroll-left="{{scrollLeft}}rpx">
+              <view class="nav-item" wx:for="{{tabLists}}" wx:key="id" bindtap="tabSelect" data-id="{{index}}">
+                <view class="nav-text {{index==tabCur?'tab-on':''}}">{{item.tag}}</view>
+              </view>
+            </scroll-view>
+            <view class="liebiao-img" bindtap="tagsShare"><image src='../../image/liebiao.png'></image></view>
+        </view>
+    </view>
+   <view class="info-main">
+    <view class="info" wx:for="{{listData}}" wx:key="index">
+      <view class="top-block"  bindtap="listClick" data-itemid="{{item.id}}">
+          <view class="title">
+            <view class="mainText">{{item.title}}</view>
+            <view class="timeText">
+                <view class="timeTextLeft">恒生健康官网</view>
+                <view class="timeText-time">{{timeData[index]}}</view>
+            </view>
+          </view>
+          <view wx:if="{{item.thumbLocation !==''}}">
+              <image class="top-blockImage" src="{{item.thumbLocation}}"></image>
+          </view>
+          <view wx:else><image class="top-blockImageBoth"></image></view>
+      </view>
+      <view class="description_text"><HtmlView detail="{{dateFr.strText(item.content)}}"/></view>
+      <view class="bottom-time">
+          <view class="leftTime">
+              <view style="padding-right:5rpx">225浏览</view>
+              <view class="itemBtn {{dateFr.indexBackColor(index)}}" wx:for="{{dateFr.tagsFilter(item.tags)}}" wx:key="index">{{item}}</view>
+          </view>
+          <view class="rightShare" bindtap="collectionImageShare"  isCollect
+                data-id="{{item.id}}">
+                <view class='numTagContent' wx:if="{{item.isCollect}}" ><image  src="../../image/collection.png"></image><text class="numTag">10</text></view>
+                <view class='numTagContent' wx:else><image  src="../../image/collection-default.png"></image><text class="numTag">1</text></view>
+                <view class='numTagContent' ><image src='../../image/share.png'></image><text class="numTag">0</text></view>
+          </view>
+      </view> 
+    </view>
+   </view>
+   <!---------------tagContent modals----------------------------->
+      <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+            <view class="modals-cancel" bindtap="hideModal"></view>
+            <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+                <view class='msg-box-image' bindtap="closePage"><image src='../../image/cancel.png'></image></view>
+                <view class='msg-box'>
+                    <view class='aumsg'>
+                        <view class="searchList-main">
+                          <view class="myTagList">
+                              <view class="myTagList-title">我的标签</view>
+                              <!-- <view class="myTagList-after">(点击进入标签文章)</view> -->
+                              <view  wx:if="{{editSwith}}" class="myTagList-btn" bindtap="editActList">编辑</view>
+                               <view wx:else class="myChange-btn">
+                                    <view class="canlenBtn" bindtap="canlenBtn">取消</view>
+                                    <view class="confirmBtn" bindtap="confirmBtn">完成</view>
+                                </view>
+                            </view>
+                           <view class="searchList">
+                                <view class="viewBtnBox" bindtap="myTagItemFun" wx:for="{{myTagData}}" data-index="{{index}}" wx:key="{{index}}">
+                                    <view class="viewBtn">{{item.tag}}</view>
+                                    <image wx:if="{{editStute}}" src='../../image/cancel.png'></image>
+                                </view>
+                                <!-- <view class="viewBtnBox viewBtnBox2 {{index==current?'moving':'normal'}}" 
+                                      wx:for="{{myTagData}}" data-index="{{index}}" wx:key="{{index}}"   
+                                      bindtouchmove="move"
+                                      bindtouchstart="movestart" 
+                                      bindtouchend="moveend" 
+                                      style="left:{{index==current?move_x * 2:item.left*2}}rpx;top:{{index==current?move_y:item.top}}px">
+                                      <view class="viewBtn">{{item.tag}}</view>
+                                      <image src='../../image/cancel.png'></image>
+                                  </view> -->
+                              </view>
+                        </view>
+                        <view class="bottomTage">
+                           <view class="bottomTage-title">为你推荐</view>
+                           <view class="intringData">
+                            <view class="viewBtnBoxint"  bindtap="addTagBbtn"  wx:for="{{forYouData}}" data-index="{{index}}" wx:key="{{index}}">
+                                <view class="viewBtn">{{item.tag}}</view>
+                                <image wx:if="{{editStute}}" src="../../image/add.png"></image>
+                            </view>
+                           </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view> 
+</view>
